@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-300 bg-[url(https://cdn.ethic.es/wp-content/uploads/2023/03/imagen.jpg)] bg-contain sm:bg-cover mt-2" style="opacity: 0.75;">
+    <div class="flex flex-col items-center justify-center h-screen w-screen p-4 sm:flex-row">
+        <form action="" class="bg-orange-600 rounded-lg p-4 sm:p-8 shadow-md w-full sm:w-1/4 m-2 sm:m-4 border-4 border-black" id="form">
+            <label for="price" class="text-lg">Precio</label>
+            <select name="price" id="price" class="p-2 border rounded-md w-full">
+                <option value="0">Aleatorio</option>
+                <option value="1">Barato</option>
+                <option value="2">Estandar</option>
+                <option value="3">Caro</option>
+            </select>
+            <label for="participants" class="text-lg mt-4">Número de participantes</label>
+            <input type="number" name="participants" id="participants" class="p-2 border rounded-md w-full">
+            <button type="submit" class="w-full bg-blue-500 text-white p-2 mt-4 rounded-md hover:bg-blue-600">
+                Obtener Actividad
+            </button>
+        </form>
+
+        <div id="activity" style="display: none;" class="bg-blue-400 rounded-lg p-4 sm:p-8 shadow-md w-full sm:w-1/4 m-2 sm:m-4 border-4 border-black">
+            <h1 class="text-2xl font-bold mb-4">Actividad</h1>
+            <p class="text-lg"><span id="activity-value"></span></p>
+            <p class="text-lg">Tipo: <span id="type-value"></span></p>
+            <p class="text-lg">Participantes: <span id="participants-value"></span></p>
+            <p class="text-lg">Precio: <span id="price-value"></span></p>
+            <p class="text-lg">Accesibilidad: <span id="accessibility-value"></span></p>
+            <img src="" alt="imagen" id="image" class="mt-4">
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
